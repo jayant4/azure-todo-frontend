@@ -1,0 +1,13 @@
+<div>
+    <label *ngIf="!task.isFinished">
+        <input type="checkbox" [(ngModel)]="task.isFinished">
+        <input type="text" [(ngModel)]="task.taskName">
+        <!-- {{task.taskName}} -->
+    </label>
+<!-- if task is finished mark as completed by striking -->
+    <label *ngIf="task.isFinished">
+        <input type="checkbox" [(ngModel)]="task.isFinished">
+        <del>{{task.taskName}}</del>
+    </label>
+    
+</div>
